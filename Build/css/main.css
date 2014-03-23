@@ -1,0 +1,505 @@
+/* CSS Main files -  Envelop Docs */
+
+/*  ============================
+		Default
+	============================  */
+
+html {
+	height: 100%;
+}
+
+body {
+	background-color: #FFFFFF;
+	font-family: "jaf-facitweb", sans-serif;
+	height: 100%;
+}
+
+/*  ============================
+		Common
+	============================  */
+
+.left {
+	float: left;
+	text-align: left;
+}
+
+.right {
+	float: right;
+	text-align: right;
+}
+
+.center {
+	text-align: center;
+}
+
+.clear {
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+
+img {
+	max-width: 100%;
+}
+
+p {
+	font-size: 16px;
+}
+
+/*  ============================
+		Header
+	============================  */
+
+.header {
+	width: 100%;
+	background-color: #6DC759;
+}
+
+.header .navigation {
+	padding: 30px 0;
+}
+
+.header .navigation .logo img {
+	width: 160px;
+	height: 32px;
+	float: left;
+}
+
+.header .navigation ul {
+	position: relative;
+	z-index: 1;
+	list-style: none;
+	padding: 0;
+	float: right;
+}
+
+.header .navigation ul li {
+	display: inline-block;
+	margin: 0 10px;
+}
+
+.header .navigation ul li a {
+	line-height: 1em;
+	color: #3C8C2D;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.header .navigation ul li a::after {
+	position: absolute;
+	top: 120%;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: rgba(0,0,0,0.3);
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	transform: translateY(10px);
+}
+
+.header .navigation ul li a:hover::after,
+.header .navigation ul li a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+.header .message {
+	padding-top: 40px;
+	padding-bottom: 30px;
+}
+
+.header h2 {
+	display: block;
+	color: #FFFFFF;
+	font-weight: 300;
+	font-size: 28px;
+	text-align: center;
+	line-height: 1.6;
+}
+
+.header h2 > span {
+	display: inline-block;
+	overflow: hidden;
+	vertical-align: top;
+	width: auto;
+	opacity: 1;
+	-webkit-transition: width 0.3s ease;
+	transition: width 0.3s ease;
+}
+
+.header h2 span > span {
+	display: inline;
+	white-space: nowrap;
+	-webkit-transition: opacity 0.3s ease;
+	transition: opacity 0.3s ease;
+}
+
+.header .device {
+	border: 4px solid #3C8C2D;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom: none;
+	height: 400px;
+	padding: 30px 30px 0 30px;
+}
+
+.header .device:after {
+	position: absolute;
+	top: 10px;
+	left: calc(50% - 3px);
+	display: block;
+	border: 2px solid #3C8C2D;
+	background: rgba(60, 140, 45, 0.2);
+	border-radius: 50%;
+	width: 6px;
+	height: 6px;
+	content: '';
+
+}
+
+.header .device .inner {
+	border: 2px solid #3C8C2D;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-bottom: none;
+	height: 100%;
+	background: rgba(60, 140, 45, 0.2);
+}
+
+@media screen and (max-width: 650px) {
+
+	.header .navigation {
+		text-align: center;
+	}
+
+	.header .navigation .logo img {
+		width: 160px;
+		height: 32px;
+		float: none;
+	}
+
+	.header .navigation ul {
+		list-style: none;
+		padding: 10px 0 0 0;
+		float: none;
+	}
+
+	.header .message {
+		padding-top: 0px;
+	}
+
+	.header h2 {
+		font-size: 24px;
+	}
+}
+
+/*  ============================
+		Call to Action
+	============================  */
+
+.cta {
+	background: #1F2124;
+	padding: 12px 0 10px 0;
+	text-align: center;
+}
+
+.cta a.main {
+	display: inline-block;
+	font-size: 18px;
+	font-weight: 200;
+	color: #D3D3D3;
+	text-decoration: none;
+	border: 2px solid rgba(211, 211, 211, 0.1);
+	border-radius: 8px;
+	padding: 8px 12px;
+	cursor: pointer;
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+	margin: 10px 0;
+}
+
+.cta a.main:hover {
+	border-color: rgba(211, 211, 211, 0.8);
+	/*background-color: rgba(211, 211, 211, 0.05);*/
+}
+
+.cta span.secondary {
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 300;
+	color: #757575;
+	padding: 0 10px;
+	margin: 10px 0;
+}
+
+/*  ============================
+		Features
+	============================  */
+
+.feature h3 {
+	color: #333333;
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 1.1em;
+	margin-bottom: 0.3em;
+}
+
+.feature p {
+	color: #565656;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 1.4em;
+}
+
+.feature .animation {
+	border: 0;
+	margin: auto;
+}
+
+/*  ============================
+		Feature One
+	============================  */
+
+.feature-one {
+	padding: 40px;
+}
+
+.feature-one .text {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+/*  ============================
+		Feature Two
+	============================  */
+
+.feature-two {
+	padding: 40px;
+}
+
+.feature-two .text {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+/*  ============================
+		Feature Three
+	============================  */
+
+.feature-three {
+	padding: 40px 0;
+}
+
+.feature-three .text {
+	padding-top: 28px;
+	padding-bottom: 28px;
+}
+
+/*  ============================
+		Feature Four
+	============================  */
+
+.feature-four {
+	padding: 40px;
+}
+
+.feature-four .text {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+/*  ============================
+		Pricing
+	============================  */
+
+.pricing {
+	border-top: 1px solid #D5D5D5;
+	background-color: #F4F4F4;
+	padding: 40px 0 20px 0;
+	text-align: center;
+}
+
+.pricing h3 {
+	color: #3B3B3B;
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 1.1em;
+	margin-bottom: 0.3em;
+}
+
+.pricing p {
+	color: #565656;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 1.4em;
+}
+
+.pricing p strong {
+	font-weight: 600;
+}
+
+.pricing p a {
+	color: #565656;
+	text-decoration: none;
+	border-bottom: 1px solid #D5D5D5;
+}
+
+.pricing table {
+	border-collapse: collapse;
+	max-width: 680px;
+	margin: 10px auto 40px auto;
+}
+
+.pricing table th {
+	padding: 10px 20px;
+	vertical-align: bottom;
+}
+
+.pricing table th.weekly,
+.pricing table th.daily {
+	padding: 0;
+}
+
+.pricing table th.weekly div,
+.pricing table th.daily div {
+	width: 100%;
+	height: 100%;
+	padding: 14px 20px;
+	border: 1px solid #429E33;
+	border-bottom: none;
+	box-sizing: border-box;
+}
+
+.pricing table th.weekly div {
+	background: #6DC759;
+	border-top-left-radius: 4px;
+	border-right: none;
+}
+
+.pricing table th.daily div {
+	background: #6DC759;
+	border-top-right-radius: 4px;
+}
+
+.pricing table td {
+	padding: 10px;
+	color: #3B3B3B;
+}
+
+.pricing table td:not(:first-of-type) {
+	border: 1px solid #D5D5D5;
+	background: #FFFFFF;
+}
+
+.pricing table th span.title {
+	color: #3B3B3B;
+	font-weight: 600;
+	font-size: 16px;
+	display: block;
+	text-transform: uppercase;
+}
+
+.pricing table th.weekly span.title,
+.pricing table th.daily span.title {
+	color: #FFFFFF;
+}
+
+.pricing table th span.sub {
+	font-weight: 300;
+	font-size: 14px;
+	display: block;
+	color: #565656;
+}
+
+.pricing table th.weekly span.sub,
+.pricing table th.daily span.sub {
+	color: #3C8C2D;
+}
+
+.pricing table tr th:first-of-type {
+	text-align: right;
+	padding: 10px 40px 10px 0;
+}
+
+.pricing table tr td:first-of-type {
+	width: 200px;
+	text-align: right;
+	color: #565656;
+	font-size: 18px;
+	padding: 10px 40px 10px 10px;
+}
+
+.pricing table tr span.dollar {
+	font-weight: 300;
+	font-size: 18px;
+	vertical-align: top;
+	position: relative;
+	top: 0.3em;
+	color: #565656;
+}
+
+.pricing table tr span.free {
+	font-size: 20px;
+}
+
+.pricing table tr span.amount {
+	font-size: 32px;
+}
+
+.pricing table tr span.month {
+	font-size: 12px;
+	color: #CCCCCC;
+	font-weight: 200;
+}
+
+/*  ============================
+		Footer
+	============================  */
+
+.footer {
+	background: #1F2124;
+	padding: 20px 0 30px 0;
+}
+
+.footer span.title {
+	display: block;
+	padding-bottom: 0.4em;
+	margin-bottom: 0.5em;
+	margin-top: 1em;
+	border-bottom: 1px solid #2C3034;
+	color: #7A7F86;
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.footer ul {
+	list-style: none;
+	margin: 0;
+}
+
+.footer ul li {
+	display: block;
+	padding: 0;
+	line-height: 1.1em;
+}
+
+.footer ul li a {
+	color: #7A7F86;
+	font-size: 12px;
+	font-weight: 400;
+	text-decoration: none;
+}
+
+.footer ul li a:hover {
+	text-decoration: underline;
+}

@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+	
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+	<meta charset="utf-8">
+
+	<!-- Title/META -->
+	<title>Envelop</title>
+	<!--<meta name="description" content="">-->
+	<link rel="icon" type="image/png" href="favicon.png">
+	<meta name="viewport" content="width = device-width, initial-scale = 1" />
+
+	<!-- CSS -->
+	<link rel='stylesheet' href='css/reset.css'>
+<link rel='stylesheet' href='css/toast.css'>
+<link rel='stylesheet' href='css/main.css'>
+
+	<!-- Fonts -->
+	<script type="text/javascript" src="//use.typekit.net/qyz1rbb.js"></script>
+	<script type="text/javascript">try{Typekit.load({active: function () {rotateText();}, inactive: function () {rotateText();}});}catch(e){}</script>
+	
+	<!-- Javascript -->
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="navigation">
+				<div class="logo">
+					<a href="https://envelop.io"><img src="images/logoWhite.svg" alt="Envelop" /></a>
+				</div>
+				<ul>
+					<li><a href="#">Use Cases</a></li>
+					<li><a href="#">Features</a></li>
+					<li><a href="#">Pricing</a></li>
+					<li><a href="#">Sign Up</a></li>
+					<li><a href="#">Login</a></li>
+				</il>
+			</div>
+			<div class="unit span-grid message">
+				<h2>Send <span><span id="flip-first">updates</span></span> of <span><span id="flip-second">new product features</span></span></h2>
+			</div>
+			<div class="device">
+				<div class="inner">
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="cta">
+		<div class="container">
+			<a class="main" href="account/signup">Sign up for free</a>
+			<span class="secondary">It takes less than a minute.</span>
+		</div>
+	</div>
+	<div class="feature feature-one">
+		<div class="container">
+			<div class="unit one-of-two text">
+				<h3>Content from Anywhere</h3>
+				<p>Collect your content from anywhere on the web, hand-picked or automatically fetched, and easily add it to Envelop.  You can chose how you want to organize the content for when it's sent.</p>
+			</div>
+			<div class="unit one-of-two">
+				<div class="wee">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="feature feature-two">
+		<div class="container">
+			<div class="unit one-of-two">
+				<div class="wee">
+					
+				</div>
+			</div>
+			<div class="unit one-of-two text">
+				<h3>Customizable</h3>
+				<p>Choose from several carefully-designed templates and add your own logo and colours.  If you're familiar with HTML, you can create your own template.</p>
+			</div>
+		</div>
+	</div>
+	<div class="feature feature-three">
+		<div class="container">
+			<div class="unit one-of-two text">
+				<h3>Flexible Scheduling</h3>
+				<p>Send content to your subscribers daily, weekly, monthly, twice a week every Monday and Thursday, every weekday, or anytime you want.  Limit the number of items you send and keep extras for next time.</p>
+			</div>
+			<div class="unit one-of-two center">
+				<iframe class="animation" src="animations/calendar/Animation.html" width="244" height="204"></iframe>
+			</div>
+		</div>
+	</div>
+	<div class="feature feature-four">
+		<div class="container">
+			<div class="unit one-of-two">
+				<div class="wee">
+					
+				</div>
+			</div>
+			<div class="unit one-of-two text">
+				<h3>Subscriber Reports</h3>
+				<p>Send content to your subscribers daily, weekly, monthly, twice a week every Monday and Thursday, every weekday, or anytime you want.  Limit the number of items you send to keep extras for next time.</p>
+			</div>
+		</div>
+	</div>
+	<div class="pricing">
+		<div class="container">
+			<div class="unit span-grid">
+				<h3>Simple, Subscriber-based Pricing</h3>
+				<p>Envelop is free for up to 50 subscribers and flexibly priced for more.</p>
+			</div>
+			<div class="unit span-grid">
+				<table>
+					<tr class="heading">
+						<th>
+							<span class="title">Subscribers</span>
+						</th>
+						<th class="weekly">
+							<div>
+								<span class="title">Weekly</span>
+								<span class="sub">Up to 5 sends per month</span>
+							</div>
+						</th>
+						<th class="daily">
+							<div>
+								<span class="title">Daily</span>
+								<span class="sub">Unlimited sends per month</span>
+							</div>
+						</th>
+					</tr>
+					<tr>
+						<td>0 - 50</td>
+						<td><span class="free">Free</span></td>
+						<td><span class="free">Free</span></td>
+					</tr>
+					<tr>
+						<td>51 - 500</td>
+						<td>
+							<span class="dollar">$</span><span class="amount">10<span><span class="month">/mo</span>
+						</td>
+						<td>
+							<span class="dollar">$</span><span class="amount">20<span><span class="month">/mo</span>
+						</td>
+					</tr>
+					<tr>
+						<td>501 - 2,500</td>
+						<td>
+							<span class="dollar">$</span><span class="amount">25<span><span class="month">/mo</span>
+						</td>
+						<td>
+							<span class="dollar">$</span><span class="amount">40<span><span class="month">/mo</span>
+						</td>
+					</tr>
+					<tr>
+						<td>2,501 - 5,000</td>
+						<td>
+							<span class="dollar">$</span><span class="amount">40<span><span class="month">/mo</span>
+						</td>
+						<td>
+							<span class="dollar">$</span><span class="amount">70<span><span class="month">/mo</span>
+						</td>
+					</tr>
+					<tr>
+						<td>5,001 - 10,000</td>
+						<td>
+							<span class="dollar">$</span><span class="amount">70<span><span class="month">/mo</span>
+						</td>
+						<td>
+							<span class="dollar">$</span><span class="amount">120</span><span class="month">/mo</span>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="unit span-grid">
+				<p><strong>Need 10,000+ subscribers?</strong>&nbsp;&nbsp;<a href="pricing">See all of our pricing options & FAQs.</a></p>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<div class="unit one-of-four">
+				<span class="title">Overview</span>
+				<ul>
+					<li><a href="#">Features</a></li>
+					<li><a href="#">Pricing</a></li>
+					<li><a href="#">Use Cases</a></li>
+					<li><a href="#">API</a></li>
+				</ul>
+			</div>
+			<div class="unit one-of-four">
+				<span class="title">Support</span>
+				<ul>
+					<li><a href="#">Help</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">Twitter</a></li>
+					<li><a href="#">Blog</a></li>
+				</ul>
+			</div>
+			<div class="unit one-of-four">
+				<span class="title">Other</span>
+				<ul>
+					<li><a href="#">Terms of Service</a></li>
+					<li><a href="#">Privacy</a></li>
+				</ul>
+			</div>
+			<div class="unit one-of-four">
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- Body Javascript -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src='javascript/waypoints.min.js'></script>
+	<script src='javascript/main.js'></script>
+
+</body>
+</html>
